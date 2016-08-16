@@ -1,0 +1,9 @@
+<script id="smuze-script" type="text/javascript" src="http://localhost:3000/js/v2/checkout_dev.js">
+    // See full list of available params 
+    // https://smuze.com/se/documentation/checkout/params
+    smuze.style = {"mainColor" : "b64348", "secondColor":"8e3438"} // red
+    smuze.token = "<? echo $order->id; ?>";
+    smuze.onSuccess = function(){
+        alert("Order has been processed")
+    }
+</script>

@@ -74,8 +74,6 @@ class Smuze
 	
 	private function doRequest($method, $url, $params, $headers){
 		
-		echo "<pre>";
-		echo "$method - $url <br>";
 		$myPrivateKey = $privateKey;
         if (!$myPrivateKey) {
             $myPrivateKey = Smuze::$privateKey;
@@ -94,9 +92,6 @@ class Smuze
             );
         }
         
-
-        
-        
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method); 
         curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
@@ -107,6 +102,5 @@ class Smuze
 		
         
         return $result;
-		
 	}
 }
